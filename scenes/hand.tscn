@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyh2xri0h71tt"]
+
+[ext_resource type="Texture2D" uid="uid://y7thkwadv2q1" path="res://assets/Hand & Napkin.png" id="1_8pu1a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6q55d"]
+radius = 100.778
+
+[node name="HandBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -13.5)
+shape = SubResource("CircleShape2D_6q55d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_8pu1a")
