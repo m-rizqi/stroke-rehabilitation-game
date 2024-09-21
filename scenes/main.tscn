@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://krplerq16ush"]
+[gd_scene load_steps=6 format=3 uid="uid://krplerq16ush"]
 
 [ext_resource type="Texture2D" uid="uid://bv5l2fhaggii1" path="res://assets/Background.png" id="1_4b8c0"]
 [ext_resource type="Texture2D" uid="uid://br4wibrednv1m" path="res://assets/Window Frame.png" id="2_008gq"]
+[ext_resource type="Shader" path="res://scenes/dust.gdshader" id="2_gy6iw"]
 [ext_resource type="PackedScene" uid="uid://dyh2xri0h71tt" path="res://scenes/hand.tscn" id="3_vm8vs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0khn8"]
+shader = ExtResource("2_gy6iw")
+shader_parameter/hand_pos_list = null
+shader_parameter/circle_count = 0
+shader_parameter/radius = 40.0
 
 [node name="Node" type="Node"]
 
@@ -15,6 +22,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_4b8c0")
 expand_mode = 2
+
+[node name="Dust" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_0khn8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.89059, 0.89059, 0.89059, 1)
 
 [node name="WindowFrameRect" type="TextureRect" parent="."]
 anchors_preset = 15
