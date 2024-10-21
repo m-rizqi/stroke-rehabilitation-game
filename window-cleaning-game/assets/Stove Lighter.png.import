@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv5l2fhaggii1"
-path="res://.godot/imported/Background.png-6d72d35f07f42b3845e8764c552bb4fb.ctex"
+uid="uid://drp80hijive6v"
+path="res://.godot/imported/Stove Lighter.png-538a697c3288d07194e0f2ab30cc57e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Background.png"
-dest_files=["res://.godot/imported/Background.png-6d72d35f07f42b3845e8764c552bb4fb.ctex"]
+source_file="res://assets/Stove Lighter.png"
+dest_files=["res://.godot/imported/Stove Lighter.png-538a697c3288d07194e0f2ab30cc57e2.ctex"]
 
 [params]
 

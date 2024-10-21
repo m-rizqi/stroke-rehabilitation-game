@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://krplerq16ush"]
+
+[ext_resource type="PackedScene" uid="uid://b5b46082rwwsl" path="res://scenes/wipe_window.tscn" id="1_ia7lo"]
+
+[node name="Node" type="Node"]
+
+[node name="Wipe Window" parent="." instance=ExtResource("1_ia7lo")]
