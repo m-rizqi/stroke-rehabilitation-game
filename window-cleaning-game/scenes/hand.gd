@@ -18,13 +18,24 @@ func _ready() -> void:
 		print("Dust node not found!")
 
 func _physics_process(delta: float) -> void:
-	# Move the hand towards the mouse position
-	var vel := (get_global_mouse_position() - global_position) * 100
-	velocity = vel
+	var vel := Vector2.ZERO
+
+	# Arrow key input for controlling the hand
+	if Input.is_action_pressed("ui_right"):
+		vel.x += 1
+	if Input.is_action_pressed("ui_left"):
+		vel.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		vel.y += 1
+	if Input.is_action_pressed("ui_up"):
+		vel.y -= 1
+
+	# Normalize and multiply velocity to set the hand speed
+	velocity = vel.normalized() * 200  # Adjust the speed as necessary
 	move_and_slide()
 
-	# If left click or Enter is pressed, "erase" dust
-	if Input.is_action_pressed("click"):
+	# If space is pressed, "erase" dust
+	if Input.is_action_pressed("ui_accept"):  # Space key mapped as 'ui_accept'
 		erase_dust()
 
 func erase_dust() -> void:
