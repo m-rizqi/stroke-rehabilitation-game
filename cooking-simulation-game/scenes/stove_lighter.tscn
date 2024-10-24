@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bimh3ud0xhsni"]
+
+[ext_resource type="Script" path="res://scripts/stove_lighter.gd" id="1_jlxpe"]
+[ext_resource type="Texture2D" uid="uid://bml5amb4sc16f" path="res://assets/Stove Lighter.png" id="1_obkcj"]
+[ext_resource type="Texture2D" uid="uid://b1ub5qu7xukxs" path="res://assets/Outline Stove Lighter.png" id="3_uylf2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g6ya2"]
+radius = 28.0
+
+[node name="StoveLighter" type="Node2D"]
+script = ExtResource("1_jlxpe")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_g6ya2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("1_obkcj")
+
+[node name="OutlineCircleSprite" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("3_uylf2")

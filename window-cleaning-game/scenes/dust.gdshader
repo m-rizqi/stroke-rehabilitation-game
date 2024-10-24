@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
-uniform vec2 hand_pos_list[1000];  // Array to hold multiple hand positions (max 1000 circles)
-uniform int hand_keys_list[1000];  // Array to represent the "keys" or index mapping to positions
+uniform vec2 hand_pos_list[5000];  // Array to hold multiple hand positions (max 5000 circles at a time)
+uniform int hand_keys_list[5000];  // Array to represent the "keys" or index mapping to positions
 uniform int circle_count = 0;      // Number of circles to draw
 uniform float radius = 50.0;       // Size of the circle for the erase effect
 

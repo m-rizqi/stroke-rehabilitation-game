@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyh2xri0h71tt"]
 
 [ext_resource type="Texture2D" uid="uid://y7thkwadv2q1" path="res://assets/Hand & Napkin.png" id="1_8pu1a"]
-[ext_resource type="Script" path="res://scripts/hand.gd" id="1_lltto"]
+[ext_resource type="Script" path="res://scenes/hand.gd" id="1_lltto"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6q55d"]
 radius = 100.778

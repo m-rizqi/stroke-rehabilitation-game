@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdket5s53ko6f"]
+
+[ext_resource type="Script" path="res://scripts/hand.gd" id="1_5upte"]
+[ext_resource type="Texture2D" uid="uid://xdwflsq12sh7" path="res://assets/Hand.png" id="1_akg6v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_luem6"]
+radius = 86.56
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_5upte")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_akg6v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, 15)
+shape = SubResource("CircleShape2D_luem6")

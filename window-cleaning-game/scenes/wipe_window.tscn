@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5b46082rwwsl"]
+[gd_scene load_steps=7 format=3 uid="uid://b5b46082rwwsl"]
 
 [ext_resource type="Texture2D" uid="uid://bv5l2fhaggii1" path="res://assets/Window View Background.png" id="1_6j6i1"]
 [ext_resource type="Shader" path="res://scenes/dust.gdshader" id="2_dv3w7"]
 [ext_resource type="Texture2D" uid="uid://br4wibrednv1m" path="res://assets/Window Frame.png" id="3_urodl"]
 [ext_resource type="PackedScene" uid="uid://dyh2xri0h71tt" path="res://scenes/hand.tscn" id="4_g4b0k"]
+[ext_resource type="Script" path="res://scripts/WebSocketClient.gd" id="5_quhkx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0khn8"]
 shader = ExtResource("2_dv3w7")
@@ -43,4 +44,12 @@ texture = ExtResource("3_urodl")
 expand_mode = 2
 
 [node name="HandBody2D" parent="." instance=ExtResource("4_g4b0k")]
+position = Vector2(600, 350)
 scale = Vector2(0.5, 0.5)
+
+[node name="WebSocketClient" type="Node" parent="."]
+script = ExtResource("5_quhkx")
+
+[connection signal="connected_to_server" from="WebSocketClient" to="HandBody2D" method="_on_websocket_client_connected_to_server"]
+[connection signal="connection_closed" from="WebSocketClient" to="HandBody2D" method="_on_websocket_client_connection_close"]
+[connection signal="message_received" from="WebSocketClient" to="HandBody2D" method="_on_websocket_message_received"]
