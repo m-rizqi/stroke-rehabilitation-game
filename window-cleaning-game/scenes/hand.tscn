@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/hand.gd" id="1_lltto"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6q55d"]
-radius = 100.778
+radius = 100.0
 
 [node name="HandBody2D" type="CharacterBody2D"]
 script = ExtResource("1_lltto")

@@ -8,7 +8,7 @@ signal connected_to_server()
 signal connection_closed()
 signal message_received(message: Variant)
 
-func getSocket() -> WebSocketPeer:
+func get_socket() -> WebSocketPeer:
 	return socket
 
 # Poll for data continuously
