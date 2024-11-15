@@ -56,6 +56,28 @@ offset_top = 40.0
 offset_right = 264.0
 offset_bottom = 128.0
 
+[node name="ButtonStart" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -80.0
+offset_right = 144.0
+offset_bottom = -49.0
+grow_vertical = 0
+text = "Start"
+
+[node name="ButtonReset" type="Button" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 158.0
+offset_top = -80.0
+offset_right = 222.0
+offset_bottom = -49.0
+grow_vertical = 0
+text = "Reset"
+
 [connection signal="connected_to_server" from="WebSocketClient" to="HandBody2D" method="_on_websocket_client_connected_to_server"]
 [connection signal="connection_closed" from="WebSocketClient" to="HandBody2D" method="_on_websocket_client_connection_close"]
 [connection signal="message_received" from="WebSocketClient" to="HandBody2D" method="_on_websocket_message_received"]

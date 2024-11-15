@@ -4,7 +4,7 @@ import serial
 import json
 
 # Configure your serial port and baud rate
-SERIAL_PORT = "COM11"  # Change to your ESP32 port (e.g., "COM3" on Windows or "/dev/ttyUSB0" on Linux)
+SERIAL_PORT = "COM9"  # Change to your ESP32 port (e.g., "COM3" on Windows or "/dev/ttyUSB0" on Linux)
 BAUD_RATE = 115200
 
 # Initialize the serial connection
